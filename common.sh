@@ -52,8 +52,7 @@ cli_common() {
         docker run -itd $RUN_USE_GPU \
             --network=${DOCKER_NET} \
             -p 7860:7860 -p 7870:7870 -p 6006:6006 \
-            -v ${VOLUMES}/data:/app/data \
-            -v ${VOLUMES}/cache:/app/cache \
+            -v ${VOLUMES}/:/app \
             --user $(id -u):$(id -g) \
             -e CAPABILITIES=${CAPABILITIES} \
             -e NLTK_DATA="/app/cache/nltk_data" \
@@ -62,5 +61,7 @@ cli_common() {
          deeplearnenv $CMD_ARG
     fi
 }
+#            -v ${VOLUMES}/data:/app/data \
+#            -v ${VOLUMES}/cache:/app/cache \
 
 
