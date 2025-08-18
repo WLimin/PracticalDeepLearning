@@ -31,18 +31,16 @@ ENV PATH=/opt/conda/bin:/opt/conda/envs/${VENV}/bin:$PATH
 WORKDIR /app
 
 # Copy the requirements file for Python dependencies
-COPY ./docker/requirements.txt /app/requirements.txt
+COPY ./docker /app/docker
+#COPY ./docker/requirements.txt /app/requirements.txt
 
 # Install Python dependencies using aliyun's PyPI mirror and clean up cache to reduce image size
 RUN --mount=type=cache,target=/root/.cache/pip  \
-  python -m pip install --no-cache-dir -r /app/requirements.txt -i https://mirrors.aliyun.com/pypi/simple  
-
-#COPY ./Speech-AI-Forge /app/Speech-AI-Forge
+  python -m pip install --no-cache-dir pip --upgrade -i https://mirrors.aliyun.com/pypi/simple && \
+  python -m pip install --no-cache-dir -r /app/docker/requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 
 RUN rm -rf /root/.cache/pip && conda clean --all && chown -R ${USER}:${USER} /app  \
   && sed -i -e 's#"https://huggingface.co#"https://hf-mirror.com#g' /opt/conda/lib/python3.1*/site-packages/huggingface_hub/constants.py 
-
-#COPY ./docker /app/docker
 
 USER ${USER}
 ENV HOME=/home/${USER}
