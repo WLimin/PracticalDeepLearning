@@ -40,7 +40,7 @@ cli_common() {
         # 不存在
         # 宿主机是否有 nvidia GPU
         if [ $NV_GPU -eq 1 ]; then #有gpu支持
-            RUN_USE_GPU="--name ${CONTAINER_NAME} --gpus all"
+            RUN_USE_GPU="--name ${CONTAINER_NAME} --gpus all --shm-size=8g"
         else
             RUN_USE_GPU="--name ${CONTAINER_NAME} "
         fi
@@ -56,6 +56,7 @@ cli_common() {
             --user $(id -u):$(id -g) \
             -e CAPABILITIES=${CAPABILITIES} \
             -e NLTK_DATA="/app/cache/nltk_data" \
+            -e MPLCONFIGDIR="/app/cache/matplotlib" \
             $EXTEND_ENV \
             $LINK_MODELS \
          deeplearnenv $CMD_ARG

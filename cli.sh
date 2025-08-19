@@ -22,8 +22,11 @@ fi
 EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix"
 #启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 -e DISPLAY=host.docker.internal:0 
 
+CONTAINER_USER=webui
 LINK_MODELS=$" -v /usr/share/fonts/truetype:/usr/share/fonts/truetype \
-  -v ${VOLUMES}/cache/fastai:/home/webui/.fastai "
+  -v ${VOLUMES}/cache/torch:/home/$CONTAINER_USER/.cache/torch \
+  -v ${VOLUMES}/cache/fastai:/home/$CONTAINER_USER/.fastai "
+
 
 cli_common
 docker exec -it ${CONTAINER_NAME} /bin/bash
