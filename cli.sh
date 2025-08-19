@@ -27,5 +27,7 @@ docker exec -it ${CONTAINER_NAME} /bin/bash
 :<<'EOF'
 
  #python3 webui.py --api
+使用vscode调试
+从容器选项，直接夹带本容器，安装必要的插件，打开/app目录。
 
 EOF
