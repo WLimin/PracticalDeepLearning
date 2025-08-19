@@ -19,7 +19,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     sed -i -e 's#archive.ubuntu.com#mirrors.ustc.edu.cn#g' -e 's#security.ubuntu.com#mirrors.ustc.edu.cn#g' /etc/apt/sources.list \
     && apt-get update -y --fix-missing \
-    && apt-get install -y git build-essential curl wget ffmpeg unzip git git-lfs sox libsox-dev tar bash vim rubberband-cli fonts-wqy-microhei \
+    && apt-get install -y git build-essential curl wget ffmpeg unzip git git-lfs sox libsox-dev tar bash vim rubberband-cli \
     && DEBIAN_FRONTEND=noninteractive apt install -y tzdata \
     && apt-get clean && git lfs install && git config --global --add safe.directory '*' \
     && python -m pip config set global.index-url https://mirrors.aliyun.com/pypi/simple && useradd -l -u $UID -U -m -s /bin/bash ${USER}
@@ -31,15 +31,16 @@ ENV PATH=/opt/conda/bin:/opt/conda/envs/${VENV}/bin:$PATH
 WORKDIR /app
 
 # Copy the requirements file for Python dependencies
-COPY ./docker /app/docker
-#COPY ./docker/requirements.txt /app/requirements.txt
+COPY ./docker/requirements.txt /app/requirements.txt
 
 # Install Python dependencies using aliyun's PyPI mirror and clean up cache to reduce image size
 RUN --mount=type=cache,target=/root/.cache/pip  \
   python -m pip install --no-cache-dir pip --upgrade -i https://mirrors.aliyun.com/pypi/simple && \
-  python -m pip install --no-cache-dir -r /app/docker/requirements.txt -i https://mirrors.aliyun.com/pypi/simple
+  python -m pip install --no-cache-dir -r /app/requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 
-RUN rm -rf /root/.cache/pip && conda clean --all && chown -R ${USER}:${USER} /app  \
+COPY ./docker /app/docker
+
+RUN rm /app/requirements.txt && rm -rf /root/.cache/pip && conda clean --all && chown -R ${USER}:${USER} /app  \
   && sed -i -e 's#"https://huggingface.co#"https://hf-mirror.com#g' /opt/conda/lib/python3.1*/site-packages/huggingface_hub/constants.py 
 
 USER ${USER}
