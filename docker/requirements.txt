@@ -123,6 +123,16 @@ tensorboard>=2.14.0
 tensorflow 
 matplotlib
 
+# fastai book
+fastai>=2.0.0
+graphviz
+ipywidgets
+nbdev>=0.2.12
+#pandas
+scikit_learn
+azure-cognitiveservices-search-imagesearch
+sentencepiece
+
 # 使用了pytorch/pytorch镜像，不存在nvcc。需要安装 NVIDIA CUDA Toolkit，或采用 nvidia/cuda镜像。deepspeed 依赖 nvcc，放弃。
 # deepspeed requirement, https://github.com/deepspeedai/DeepSpeed/blob/master/requirements/requirements.txt
 # deepspeed >=0.15.1; sys_platform == 'linux'
