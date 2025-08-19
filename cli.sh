@@ -18,13 +18,16 @@ if [ $NV_GPU -eq 0 ]; then #没有gpu支持
     CMD_ARG=
 fi
 #额外的容器变量
+# 需要在宿主机执行 xhost +localhost 打开x11支持。 
 EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix "
-# 上面的设置是打开x11支持。需要在宿主机执行 xhost +localhost 启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 --env DISPLAY=host.docker.internal:0 
+#启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 -e DISPLAY=host.docker.internal:0 
 cli_common
 docker exec -it ${CONTAINER_NAME} /bin/bash
 
 :<<'EOF'
 
  #python3 webui.py --api
+使用vscode调试
+从容器选项，直接夹带本容器，安装必要的插件，打开/app目录。
 
 EOF
