@@ -15,7 +15,7 @@ source ${SHELL_FOLDER}/common.sh
 # 传递给容器的默认命令行
 declare -a CMD_ARG=(
  '/bin/bash' '-c' 
- "cd /app/doc/d2l-zh && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"
+ "cd /app && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"
 )
 
 if [ $NV_GPU -eq 0 ]; then #没有gpu支持
