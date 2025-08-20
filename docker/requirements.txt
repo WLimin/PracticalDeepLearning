@@ -133,7 +133,13 @@ scikit_learn
 azure-cognitiveservices-search-imagesearch
 sentencepiece
 ipykernel
+fastbook
+jupyterlab
+matplotlib_inline
 
+#d2l book
+d2l
+jupyter
 # 使用了pytorch/pytorch镜像，不存在nvcc。需要安装 NVIDIA CUDA Toolkit，或采用 nvidia/cuda镜像。deepspeed 依赖 nvcc，放弃。
 # deepspeed requirement, https://github.com/deepspeedai/DeepSpeed/blob/master/requirements/requirements.txt
 # deepspeed >=0.15.1; sys_platform == 'linux'

@@ -6,6 +6,7 @@
 # LINK_MODELS
 # CMD_ARG
 # EXTEND_ENV
+#CONTAINER_USER
 
 # 重复利用其它项目已经下载的模型，可以全部移动到${VOLUMES}/models目录下。若不需要，设置为空
 LINK_MODELS=$" "
