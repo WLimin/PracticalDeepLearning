@@ -60,3 +60,4 @@ data
 *.filelist
 !/build.sh
 /models
+/cache
