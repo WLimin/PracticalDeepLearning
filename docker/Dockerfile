@@ -53,7 +53,10 @@ RUN /opt/conda/bin/python3.11 -m venv  --system-site-packages ${VENV} \
  && bash /app/docker/patch.sh && mkdir -p $HOME/.cache/torch
 
 ENV LD_LIBRARY_PATH=/opt/conda/lib/python3.11/site-packages/torch/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH
+ENV PATH=/app:$PATH
+
 ENV NLTK_DATA=/app/cache/nltk_data MPLCONFIGDIR=/app/cache/matplotlib
 WORKDIR /app
+EXPOSE 6006 7860 7870 8888
 # Set the default command (modify as needed based on your application)
 CMD ["bash"]

@@ -56,8 +56,8 @@ ref/*
 */.gitignore
 */.gitattributes
 results
-data
 *.filelist
 !/build.sh
 /models
 /cache
+/doc

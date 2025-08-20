@@ -19,7 +19,7 @@ if [ $NV_GPU -eq 0 ]; then #没有gpu支持
 fi
 #额外的容器变量
 # 需要在宿主机执行 xhost +localhost 打开x11支持。 
-EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix"
+EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -p 8888:8888 "
 #启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 -e DISPLAY=host.docker.internal:0 
 
 CONTAINER_USER=webui
@@ -36,5 +36,13 @@ docker exec -it ${CONTAINER_NAME} /bin/bash
  #python3 webui.py --api
 使用vscode调试
 从容器选项，直接夹带本容器，安装必要的插件，打开/app目录。
+
+可以用vscode夹带容器，用jubpyter插件浏览和运行notebook
+或
+浏览器打开d2l-zh
+cd /app/doc/d2l-zh/pytorch
+jupyter notebook --no-browser --ip=0.0.0.0 --port=8888
+
+注意token
 
 EOF
