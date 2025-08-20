@@ -13,13 +13,17 @@ DOCKER_NET=openwebui-net
 
 source ${SHELL_FOLDER}/common.sh
 # 传递给容器的默认命令行
-CMD_ARG=
+declare -a CMD_ARG=(
+ '/bin/bash' '-c' 
+ "cd /app/doc/d2l-zh && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"
+)
+
 if [ $NV_GPU -eq 0 ]; then #没有gpu支持
-    CMD_ARG=
+    CMD_ARG=$CMD_ARG #错误的传递数组！
 fi
 #额外的容器变量
 # 需要在宿主机执行 xhost +localhost 打开x11支持。 
-EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -p 8888:8888 "
+EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -p 8888:8888 --init "
 #启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 -e DISPLAY=host.docker.internal:0 
 
 CONTAINER_USER=webui
@@ -27,10 +31,11 @@ LINK_MODELS=$" -v /usr/share/fonts/truetype:/usr/share/fonts/truetype \
   -v ${VOLUMES}/cache/torch:/home/$CONTAINER_USER/.cache/torch \
   -v ${VOLUMES}/cache/fastai:/home/$CONTAINER_USER/.fastai "
 
-
 cli_common
-docker exec -it ${CONTAINER_NAME} /bin/bash
 
+# open other cli container
+#docker exec -it ${CONTAINER_NAME} /bin/bash
+docker logs -f ${CONTAINER_NAME}
 :<<'EOF'
 
  #python3 webui.py --api
@@ -43,6 +48,19 @@ docker exec -it ${CONTAINER_NAME} /bin/bash
 cd /app/doc/d2l-zh/pytorch
 jupyter notebook --no-browser --ip=0.0.0.0 --port=8888
 
-注意token
+注意token。
+
+另外，若默认自动启动Jupyter，需要注意：
+Docker CMD
+Using jupyter server as a Docker CMD results in kernels repeatedly crashing, likely due to a lack of PID reaping. To avoid this, use the tini init as your Dockerfile ENTRYPOINT:
+
+# Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+RUN chmod +x /usr/bin/tini
+ENTRYPOINT ["/usr/bin/tini", "--"]
+
+EXPOSE 8888
+CMD ["jupyter", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 
 EOF

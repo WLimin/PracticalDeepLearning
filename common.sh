@@ -4,7 +4,7 @@
 # CONTAINER_NAME
 # DOCKER_NET
 # LINK_MODELS
-# CMD_ARG
+# (CMD_ARG)
 # EXTEND_ENV
 #CONTAINER_USER
 
@@ -60,7 +60,7 @@ cli_common() {
             -e MPLCONFIGDIR="/app/cache/matplotlib" \
             $EXTEND_ENV \
             $LINK_MODELS \
-         deeplearnenv $CMD_ARG
+         deeplearnenv "${CMD_ARG[@]}"
     fi
 }
 #            -v ${VOLUMES}/data:/app/data \

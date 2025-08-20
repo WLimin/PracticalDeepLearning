@@ -19,7 +19,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     sed -i -e 's#archive.ubuntu.com#mirrors.ustc.edu.cn#g' -e 's#security.ubuntu.com#mirrors.ustc.edu.cn#g' /etc/apt/sources.list \
     && apt-get update -y --fix-missing \
-    && apt-get install -y git build-essential curl wget ffmpeg unzip git git-lfs sox libsox-dev tar bash vim rubberband-cli \
+    && apt-get install -y git build-essential curl wget ffmpeg unzip git git-lfs sox libsox-dev tar bash vim rubberband-cli tini \
     && DEBIAN_FRONTEND=noninteractive apt install -y tzdata \
     && apt-get clean && git lfs install && git config --global --add safe.directory '*' \
     && python -m pip config set global.index-url https://mirrors.aliyun.com/pypi/simple && useradd -l -u $UID -U -m -s /bin/bash ${USER}
@@ -58,5 +58,9 @@ ENV PATH=/app:$PATH
 ENV NLTK_DATA=/app/cache/nltk_data MPLCONFIGDIR=/app/cache/matplotlib
 WORKDIR /app
 EXPOSE 6006 7860 7870 8888
+# Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
+#ENTRYPOINT ["/usr/bin/tini", "--"]
 # Set the default command (modify as needed based on your application)
+#CMD ["jupyter", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 CMD ["bash"]
+
