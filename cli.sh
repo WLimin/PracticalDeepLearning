@@ -13,7 +13,7 @@ DOCKER_NET=openwebui-net
 
 source ${SHELL_FOLDER}/common.sh
 # 传递给容器的默认命令行
-declare -a CMD_ARG=( '/bin/bash' '-c' "cd /app && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888" )
+declare -a CMD_ARG=( '/bin/bash' )
 
 if [ $NV_GPU -eq 0 ]; then #没有gpu支持
     CMD_ARG=$CMD_ARG #错误的传递数组！
@@ -31,8 +31,8 @@ LINK_MODELS=$" -v /usr/share/fonts/truetype:/usr/share/fonts/truetype \
 cli_common
 
 # open other cli container
-#docker exec -it ${CONTAINER_NAME} /bin/bash
-docker logs -f ${CONTAINER_NAME}
+docker exec -it ${CONTAINER_NAME} /bin/bash
+#docker logs -f ${CONTAINER_NAME}
 :<<'EOF'
 
  #python3 webui.py --api
