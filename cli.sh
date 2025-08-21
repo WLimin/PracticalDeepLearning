@@ -13,10 +13,7 @@ DOCKER_NET=openwebui-net
 
 source ${SHELL_FOLDER}/common.sh
 # 传递给容器的默认命令行
-declare -a CMD_ARG=(
- '/bin/bash' '-c' 
- "cd /app && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888"
-)
+declare -a CMD_ARG=( '/bin/bash' '-c' "cd /app && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888" )
 
 if [ $NV_GPU -eq 0 ]; then #没有gpu支持
     CMD_ARG=$CMD_ARG #错误的传递数组！
@@ -63,4 +60,7 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 EXPOSE 8888
 CMD ["jupyter", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 
+# 关于Jupyter notebook 三种方法
+# 1. 如上所述，在debian中apt安装tini，使用ENTRYPOINT+CMD，2. 在创建容器时用 --init 参数，等效指定 --entrypoint。declare -a CMD_ARG=( '/bin/bash' '-c' "cd /app && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888" ) 
+# 3.直接使用vscode夹带容器，安装必要的jupyter插件，无需上面两个方法。
 EOF

@@ -58,9 +58,10 @@ ENV PATH=/app:$PATH
 ENV NLTK_DATA=/app/cache/nltk_data MPLCONFIGDIR=/app/cache/matplotlib
 WORKDIR /app
 EXPOSE 6006 7860 7870 8888
+# 有两种方法：一是取消下面的注释，二是在外部创建容器时用 --init 参数，等效指定 --entrypoint。
 # Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
 #ENTRYPOINT ["/usr/bin/tini", "--"]
+#CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 # Set the default command (modify as needed based on your application)
-#CMD ["jupyter", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 CMD ["bash"]
 
