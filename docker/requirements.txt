@@ -136,6 +136,7 @@ ipykernel
 fastbook
 jupyterlab
 matplotlib_inline
+voila
 
 #d2l book
 d2l
