@@ -132,16 +132,18 @@
       * 张量形状(shape)的长度(length)是其秩(rank), 秩是张量中轴(axes)或维度(dimensions)的数量；形状是张量每个轴的大小。
       * 感到困惑时，将所有陈述转换为秩、轴和长度这些明确的术语。例如，三维向量v描述长宽高，但描述六面体坐标的v2是秩为一的张量，这意味着它只有一个轴（即使该轴的长度为三）。
   - [X] 前向传播和反向传播原理
+  - [X] 过拟合与正则化概念
 ### Day 4 深度学习基础 + 神经网络原理
   - [X] d2l-torch.pdf:73-126
     + 容器内添加一个小补丁，原因是d2l版本问题。在patch.sh中从0.7升级到1.0.3，和notebook不匹配(train_ch3丢失)。
       + cp /app/d2l-zh/d2l/torch.py ~/deep_learn/lib/python3.11/site-packages/d2l
       + ln -s /app/data/ /app/doc/d2l-zh/pytorch/
   - [X] 04_mnist_basics(Part 2)
+    + 个人感觉：训练模型的7步和PID的控制思想一致，只是术语不同。
   - [X] 概率论与数理统计回顾
   - [X] 简单线性回归实现，理解梯度下降
   - [X] 神经网络数学基础（激活函数、损失函数）
-  - [ ] 过拟合与正则化概念
+  - [X] 不要相信04_mnist_basics灌输的“只要高中数学基础”。印象中的高中数学没有学习过概率论/偏导数之类的。
 ### Day 5 全连接/实际操作
   - [ ] d2l-torch.pdf:139-190
   - [ ] 04_mnist_basics(Part 3)
