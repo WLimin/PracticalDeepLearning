@@ -2,9 +2,11 @@
 
 ## 记录了本人学习深度学习的进展情况
 1. 可能使用的工具
-   - qwen-coder3
+   - qwen-coder3:30b
      * 计划制订
      * 资源提供与解释
+       * 彻底放弃这个LLM的SVG绘图，不靠谱，成功的概率密度为0e-99
+       * 提示词：在svg上绘制函数y=f(x)=x3−x1​和其在x=1处切线的图像,x的区间定义为(0,4]。 
    - vscode
      * 编辑器而已
    - docker
@@ -97,6 +99,7 @@
 ## 计划与变化
 1. 基本参照d2l的主线，结合fastai/fastbook。
 2. 目标先坚持8天。
+3. 想知道计划和进展的变化？当然有，非常详细！你知道该从哪里找。
 ## 进展
 ### Day 1 基础概念/综述/概览
 - [x] 边学边准备环境。已经完成docker构建jupyter, fastai, d2l，使用vscode.
@@ -128,33 +131,33 @@
     + [X] PyTorch张量操作、数据加载器
       * 张量形状(shape)的长度(length)是其秩(rank), 秩是张量中轴(axes)或维度(dimensions)的数量；形状是张量每个轴的大小。
       * 感到困惑时，将所有陈述转换为秩、轴和长度这些明确的术语。例如，三维向量v描述长宽高，但描述六面体坐标的v2是秩为一的张量，这意味着它只有一个轴（即使该轴的长度为三）。
+  - [X] 前向传播和反向传播原理
 ### Day 4 深度学习基础 + 神经网络原理
-  - [ ] d2l-torch.pdf:73-138
+  - [X] d2l-torch.pdf:73-126
     + 容器内添加一个小补丁，原因是d2l版本问题。在patch.sh中从0.7升级到1.0.3，和notebook不匹配(train_ch3丢失)。
       + cp /app/d2l-zh/d2l/torch.py ~/deep_learn/lib/python3.11/site-packages/d2l
       + ln -s /app/data/ /app/doc/d2l-zh/pytorch/
-  - [ ] 04_mnist_basics(Part 2)
+  - [X] 04_mnist_basics(Part 2)
   - [X] 概率论与数理统计回顾
   - [X] 简单线性回归实现，理解梯度下降
-  - [ ] 神经网络数学基础（激活函数、损失函数）
-  - [ ] 前向传播和反向传播原理
-  - [ ] 多层感知机(MLP)实现
+  - [X] 神经网络数学基础（激活函数、损失函数）
   - [ ] 过拟合与正则化概念
-### Day 5 CNN基础/实际操作
+### Day 5 全连接/实际操作
   - [ ] d2l-torch.pdf:139-190
   - [ ] 04_mnist_basics(Part 3)
   - [ ] PyTorch模型定义与训练流程
   - [ ] PyTorch模型保存/加载
   - [ ] 图像分类任务实践（MNIST）
+  - [ ] 多层感知机(MLP)实现
+### Day 6 CNN基础/CNN深化学习/基本系统组装
+  - [ ] 04_mnist_basics(Part 4)
+  - [ ] d2l-torch.pdf:243-283
   - [ ] CNN基本概念（卷积、池化、激活）
+  - [ ] 池化层、批归一化、残差连接
   - [ ] 卷积层计算过程详解
   - [ ] CNN网络结构设计
   - [ ] PyTorch中CNN实现
   - [ ] 经典CNN网络结构（LeNet, AlexNet）
-### Day 6 CNN深化学习/基本系统组装
-  - [ ] 04_mnist_basics(Part 4)
-  - [ ] d2l-torch.pdf:243-283
-  - [ ] 池化层、批归一化、残差连接
   - [ ] 迁移学习概念介绍
   - [ ] 图像分类CNN模型构建
 ### Day 7 暂缓/回顾/复习
