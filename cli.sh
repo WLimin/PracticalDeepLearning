@@ -26,7 +26,8 @@ EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -p 8888:8888 -
 CONTAINER_USER=webui
 LINK_MODELS=$" -v /usr/share/fonts/truetype:/usr/share/fonts/truetype \
   -v ${VOLUMES}/cache/torch:/home/$CONTAINER_USER/.cache/torch \
-  -v ${VOLUMES}/cache/fastai:/home/$CONTAINER_USER/.fastai "
+  -v ${VOLUMES}/cache/fastai:/home/$CONTAINER_USER/.fastai \
+  -v vscode_extension:/home/$CONTAINER_USER/.vscode-server "
 
 cli_common
 
@@ -63,4 +64,11 @@ CMD ["jupyter", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 # 关于Jupyter notebook 三种方法
 # 1. 如上所述，在debian中apt安装tini，使用ENTRYPOINT+CMD，2. 在创建容器时用 --init 参数，等效指定 --entrypoint。declare -a CMD_ARG=( '/bin/bash' '-c' "cd /app && jupyter notebook --no-browser --ip=0.0.0.0 --port=8888" ) 
 # 3.直接使用vscode夹带容器，安装必要的jupyter插件，无需上面两个方法。
+
+#保存与导入卷容器
+
+backup_file="volume_backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+docker run --rm --user $(id -u):$(id -g) -v vscode_extension:/data -v $(pwd):/backup alpine tar czf /backup/$backup_file -C /data .
+docker run --rm --user $(id -u):$(id -g) -v vscode_extension:/data -v $(pwd):/backup alpine sh -c "cd /data && tar xzf /backup/$backup_file"
+
 EOF
