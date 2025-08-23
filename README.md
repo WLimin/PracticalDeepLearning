@@ -18,7 +18,82 @@
     * d2l
     * fastbook
 3. 从不缺席的懒惰，与偶尔奋斗的坚持：时间
+## 容器目录列表
 
+```console
+./data/FashionMNIST/raw
+./cache/fastai/data/mnist_sample
+./cache/fastai/data/imdb_tok
+./cache/fastai/data/oxford-iiit-pet
+./cache/fastai/data/imdb
+./cache/fastai/models/wt103-fwd
+./cache/torch/hub/checkpoints
+./cache/matplotlib
+./cache/nltk_data
+./fastbook/images
+./fastbook/tools
+./fastbook/translations/cn
+./fastbook/clean
+./d2l-zh
+./d2l-zh/d2l
+./d2l-zh/chapter_installation
+./.vscode
+下载的Jupyter noetbook d2l-zh.zip 解压缩到 ./doc/d2l-zh
+./doc/d2l-zh/mxnet
+./doc/d2l-zh/tensorflow
+./doc/d2l-zh/pytorch
+./doc/d2l-zh/pytorch/chapter_recurrent-neural-networks
+./doc/d2l-zh/pytorch/chapter_multilayer-perceptrons
+./doc/d2l-zh/pytorch/chapter_convolutional-modern
+./doc/d2l-zh/pytorch/chapter_attention-mechanisms
+./doc/d2l-zh/pytorch/chapter_optimization
+./doc/d2l-zh/pytorch/chapter_deep-learning-computation
+./doc/d2l-zh/pytorch/chapter_appendix-tools-for-deep-learning
+./doc/d2l-zh/pytorch/chapter_references
+./doc/d2l-zh/pytorch/chapter_computer-vision
+./doc/d2l-zh/pytorch/chapter_introduction
+./doc/d2l-zh/pytorch/chapter_introduction/.ipynb_checkpoints
+./doc/d2l-zh/pytorch/img
+./doc/d2l-zh/pytorch/img/frontends
+./doc/d2l-zh/pytorch/chapter_convolutional-neural-networks
+./doc/d2l-zh/pytorch/.ipynb_checkpoints
+./doc/d2l-zh/pytorch/chapter_notation
+./doc/d2l-zh/pytorch/chapter_notation/.ipynb_checkpoints
+./doc/d2l-zh/pytorch/chapter_preface
+./doc/d2l-zh/pytorch/chapter_preface/.ipynb_checkpoints
+./doc/d2l-zh/pytorch/chapter_preliminaries
+./doc/d2l-zh/pytorch/chapter_recurrent-modern
+./doc/d2l-zh/pytorch/chapter_computational-performance
+./doc/d2l-zh/pytorch/chapter_linear-networks
+./doc/d2l-zh/pytorch/chapter_natural-language-processing-pretraining
+./doc/d2l-zh/pytorch/chapter_natural-language-processing-applications
+./doc/d2l-zh/pytorch/chapter_installation
+./doc/d2l-zh/pytorch/chapter_installation/.ipynb_checkpoints
+./doc/d2l-zh/paddle
+./doc/d2l-zh/paddle/chapter_recurrent-neural-networks
+./doc/d2l-zh/paddle/chapter_multilayer-perceptrons
+./doc/d2l-zh/paddle/chapter_convolutional-modern
+./doc/d2l-zh/paddle/chapter_attention-mechanisms
+./doc/d2l-zh/paddle/chapter_optimization
+./doc/d2l-zh/paddle/chapter_deep-learning-computation
+./doc/d2l-zh/paddle/chapter_appendix-tools-for-deep-learning
+./doc/d2l-zh/paddle/chapter_references
+./doc/d2l-zh/paddle/chapter_computer-vision
+./doc/d2l-zh/paddle/chapter_introduction
+./doc/d2l-zh/paddle/img
+./doc/d2l-zh/paddle/img/frontends
+./doc/d2l-zh/paddle/chapter_convolutional-neural-networks
+./doc/d2l-zh/paddle/chapter_notation
+./doc/d2l-zh/paddle/chapter_preface
+./doc/d2l-zh/paddle/chapter_preliminaries
+./doc/d2l-zh/paddle/chapter_recurrent-modern
+./doc/d2l-zh/paddle/chapter_computational-performance
+./doc/d2l-zh/paddle/chapter_linear-networks
+./doc/d2l-zh/paddle/chapter_natural-language-processing-pretraining
+./doc/d2l-zh/paddle/chapter_natural-language-processing-applications
+./doc/d2l-zh/paddle/chapter_installation
+./docker
+```
 ## 计划与变化
 1. 基本参照d2l的主线，结合fastai/fastbook。
 2. 目标先坚持8天。
@@ -55,9 +130,12 @@
       * 感到困惑时，将所有陈述转换为秩、轴和长度这些明确的术语。例如，三维向量v描述长宽高，但描述六面体坐标的v2是秩为一的张量，这意味着它只有一个轴（即使该轴的长度为三）。
 ### Day 4 深度学习基础 + 神经网络原理
   - [ ] d2l-torch.pdf:73-138
+    + 容器内添加一个小补丁，原因是d2l版本问题。在patch.sh中从0.7升级到1.0.3，和notebook不匹配(train_ch3丢失)。
+      + cp /app/d2l-zh/d2l/torch.py ~/deep_learn/lib/python3.11/site-packages/d2l
+      + ln -s /app/data/ /app/doc/d2l-zh/pytorch/
   - [ ] 04_mnist_basics(Part 2)
-  - [ ] 概率论与数理统计回顾
-  - [ ] 简单线性回归实现，理解梯度下降
+  - [X] 概率论与数理统计回顾
+  - [X] 简单线性回归实现，理解梯度下降
   - [ ] 神经网络数学基础（激活函数、损失函数）
   - [ ] 前向传播和反向传播原理
   - [ ] 多层感知机(MLP)实现
