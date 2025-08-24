@@ -29,6 +29,7 @@ pip install --no-cache-dir --upgrade 'd2l>=1.0.3'
 # restore other
 pip install --no-cache-dir --upgrade 'numpy==1.26.4' 'requests>=2.32.3' 'jupyter==1.1.1' 'matplotlib-inline==0.1.7' 'matplotlib==3.10.5'
 
+cp /app/docker/d2l_torch.py ~/deep_learn/lib/python3.11/site-packages/d2l/torch.py
 
 #13 15.27 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
 #13 15.27 d2l 1.0.3 requires jupyter==1.0.0, but you have jupyter 1.1.1 which is incompatible.

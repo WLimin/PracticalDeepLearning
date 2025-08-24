@@ -32,6 +32,8 @@ LINK_MODELS=$" -v /usr/share/fonts/truetype:/usr/share/fonts/truetype \
 cli_common
 
 # open other cli container
+#docker exec ${CONTAINER_NAME} /bin/bash -c "cp /app/d2l-zh/d2l/torch.py ~/deep_learn/lib/python3.11/site-packages/d2l"
+
 docker exec -it ${CONTAINER_NAME} /bin/bash
 #docker logs -f ${CONTAINER_NAME}
 :<<'EOF'
