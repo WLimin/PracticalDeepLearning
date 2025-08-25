@@ -71,6 +71,8 @@ CMD ["jupyter", "server", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
 
 backup_file="volume_backup_$(date +%Y%m%d_%H%M%S).tar.gz"
 docker run --rm --user $(id -u):$(id -g) -v vscode_extension:/data -v $(pwd):/backup alpine tar czf /backup/$backup_file -C /data .
-docker run --rm --user $(id -u):$(id -g) -v vscode_extension:/data -v $(pwd):/backup alpine sh -c "cd /data && tar xzf /backup/$backup_file"
+#docker run --rm --user $(id -u):$(id -g) -v vscode_extension:/data -v $(pwd):/backup alpine sh -c "cd /data && tar xzf /backup/$backup_file"
+./cli.sh
+cd ~/.vscode-server && tar xzf /app/$backup_file
 
 EOF
