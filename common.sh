@@ -52,7 +52,7 @@ cli_common() {
         CAPABILITIES=api
         docker run -itd $RUN_USE_GPU \
             --network=${DOCKER_NET} \
-            -p 7860:7860 -p 7870:7870 -p 6006:6006 \
+            -p 6006:6006 \
             -v ${VOLUMES}/:/app \
             --user $(id -u):$(id -g) \
             -e CAPABILITIES=${CAPABILITIES} \
@@ -65,5 +65,6 @@ cli_common() {
 }
 #            -v ${VOLUMES}/data:/app/data \
 #            -v ${VOLUMES}/cache:/app/cache \
-
+#            -p 7860:7860 -p 7870:7870 \
+#
 

@@ -2,9 +2,11 @@
 
 ## 记录了本人学习深度学习的进展情况
 1. 可能使用的工具
-   - qwen-coder3
+   - qwen-coder3:30b
      * 计划制订
      * 资源提供与解释
+       * 彻底放弃这个LLM的SVG绘图，不靠谱，成功的概率密度为0e-99
+       * 提示词：在svg上绘制函数y=f(x)=x3−x1​和其在x=1处切线的图像,x的区间定义为(0,4]。 
    - vscode
      * 编辑器而已
    - docker
@@ -97,6 +99,7 @@
 ## 计划与变化
 1. 基本参照d2l的主线，结合fastai/fastbook。
 2. 目标先坚持8天。
+3. 想知道计划和进展的变化？当然有，非常详细！你知道该从哪里找。
 ## 进展
 ### Day 1 基础概念/综述/概览
 - [x] 边学边准备环境。已经完成docker构建jupyter, fastai, d2l，使用vscode.
@@ -125,39 +128,47 @@
     + [x] 自动微分--需要以后再消化/记忆公式推导
   - [X] 04_mnist_basics(Part 1) 第四章：底层：训练数字分类器
     + [X] Tensor操作、自动微分机制
-    + [X] PyTorch张量操作、数据加载器
+    + [X] PyTorch张量操作
       * 张量形状(shape)的长度(length)是其秩(rank), 秩是张量中轴(axes)或维度(dimensions)的数量；形状是张量每个轴的大小。
       * 感到困惑时，将所有陈述转换为秩、轴和长度这些明确的术语。例如，三维向量v描述长宽高，但描述六面体坐标的v2是秩为一的张量，这意味着它只有一个轴（即使该轴的长度为三）。
-### Day 4 深度学习基础 + 神经网络原理
-  - [ ] d2l-torch.pdf:73-138
+  - [X] 前向传播和反向传播原理
+  - [X] 过拟合与正则化概念
+### Day 4 深度学习基础 + 神经网络原理/线性神经网络
+  - [X] d2l-torch.pdf:73-126
     + 容器内添加一个小补丁，原因是d2l版本问题。在patch.sh中从0.7升级到1.0.3，和notebook不匹配(train_ch3丢失)。
       + cp /app/d2l-zh/d2l/torch.py ~/deep_learn/lib/python3.11/site-packages/d2l
       + ln -s /app/data/ /app/doc/d2l-zh/pytorch/
-  - [ ] 04_mnist_basics(Part 2)
+  - [X] 04_mnist_basics(Part 2)
+    + 个人感觉：训练模型的7步和PID的控制思想一致，只是术语不同。
   - [X] 概率论与数理统计回顾
   - [X] 简单线性回归实现，理解梯度下降
-  - [ ] 神经网络数学基础（激活函数、损失函数）
-  - [ ] 前向传播和反向传播原理
-  - [ ] 多层感知机(MLP)实现
-  - [ ] 过拟合与正则化概念
-### Day 5 CNN基础/实际操作
-  - [ ] d2l-torch.pdf:139-190
-  - [ ] 04_mnist_basics(Part 3)
-  - [ ] PyTorch模型定义与训练流程
+  - [X] 神经网络数学基础（激活函数、损失函数）
+  - [X] 不要相信04_mnist_basics灌输的“只要高中数学基础”。印象中的高中数学没有学习过概率论/偏导数之类的。
+### Day 5 全连接层/线性神经网络/实际操作
+  - [ ] d2l-torch.pdf:139-155
+    + [X] 多层感知机(MLP)实现
+    + [X] 关于初始化中 缩小*0.01 的解释：常用经验值，防止梯度消失或爆炸，可Xavier/He初始化或使用PyTorch内置方法torch.nn.init.xavier_uniform_(W1)
+    + [X] 过拟合与正则化深入了解
+    + [X] 权重衰减
+  - [X] 04_mnist_basics(Part 3)
+  - [X] PyTorch模型定义与训练流程
   - [ ] PyTorch模型保存/加载
+  - [X] PyTorch数据集加载器
   - [ ] 图像分类任务实践（MNIST）
+### Day 6 基础任务/正则化模型技术
+  - [ ] d2l-torch.pdf:156-190
+  - [ ] 权重衰减
+  - [ ] 暂退法（Dropout）
+### Day 7 CNN基础/CNN深化学习/基本系统组装
   - [ ] CNN基本概念（卷积、池化、激活）
+  - [ ] 池化层、批归一化、残差连接
   - [ ] 卷积层计算过程详解
   - [ ] CNN网络结构设计
   - [ ] PyTorch中CNN实现
   - [ ] 经典CNN网络结构（LeNet, AlexNet）
-### Day 6 CNN深化学习/基本系统组装
-  - [ ] 04_mnist_basics(Part 4)
-  - [ ] d2l-torch.pdf:243-283
-  - [ ] 池化层、批归一化、残差连接
   - [ ] 迁移学习概念介绍
   - [ ] 图像分类CNN模型构建
-### Day 7 暂缓/回顾/复习
+### Day 8 暂缓/回顾/复习
   - [ ] d2l-torch.pdf:139-190
   - [ ] 04_mnist_basics(Part 3)
   - [ ] CIFAR-10数据集实践
