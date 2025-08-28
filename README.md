@@ -189,12 +189,12 @@
 ### Day 9 经典CNN网络结构/完成第一阶段/回顾3个课件编排
   - [X] 斯坦福2021秋季·实用机器学习/概论
     - [X] 3.7 循环神经网络
-    - [ ]] 4.1～4.3/5.1～5.4模型评估/验证/拟合/方差/Bagging/Boosting/Stacking
-  - [ ] d2l-torch.pdf:232-247
-  - [ ] 卷积层计算过程详解
-  - [ ] CNN网络结构设计
+    - [X] 4.1～4.3/5.1～5.4模型评估/验证/拟合/方差/Bagging/Boosting/Stacking
+  - [X] d2l-torch.pdf:232-247
+  - [X] 卷积层计算过程详解
+  - [X] CNN网络结构设计
   - [ ] PyTorch中CNN实现
-  - [ ] 经典CNN网络结构（LeNet, AlexNet）
+  - [X] 经典CNN网络结构（LeNet, AlexNet）
   - [ ] 图像分类CNN模型构建
 ### Day 10 现代卷积神经网络
   - [ ] 
