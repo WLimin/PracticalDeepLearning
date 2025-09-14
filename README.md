@@ -274,3 +274,7 @@
     隐藏其他列可传入参数subset，如df.style.hide(subset = [0,1,3], axis = 0)
     同时更改的还有设置显示的小数精度，之前版本用的是“df.style.set_precision(2)”，设置带有小数点的列精度调整为小数点后2位，最新版本需将代码改成：
     df.style.format(precision = 2) 实现上述功能
+### Day 23 - 25 Other Thing
+  - 看到有人开始用术语炫耀了，居然我都清楚概念上是什么，虽然代码不知道
+### Day 26 FastAI 06 multicat
+  - 多标签分类和回归
