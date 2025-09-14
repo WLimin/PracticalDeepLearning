@@ -276,5 +276,6 @@
     df.style.format(precision = 2) 实现上述功能
 ### Day 23 - 25 Other Thing
   - 看到有人开始用术语炫耀了，居然我都清楚概念上是什么，虽然代码不知道
-### Day 26 FastAI 06 multicat
+### Day 26 FastAI 06 multicat 07 sizing and tta 
   - 多标签分类和回归
+  - 第七章：训练一个最先进的模型
