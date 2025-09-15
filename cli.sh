@@ -20,7 +20,7 @@ if [ $NV_GPU -eq 0 ]; then #没有gpu支持
 fi
 #额外的容器变量
 # 需要在宿主机执行 xhost +localhost 打开x11支持。 
-EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -p 8888:8888 --init "
+EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -p 8888:8888 --init --shm-size 8G "
 #启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 -e DISPLAY=host.docker.internal:0 
 
 CONTAINER_USER=webui
