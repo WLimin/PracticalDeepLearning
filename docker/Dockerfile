@@ -50,7 +50,7 @@ WORKDIR $HOME
 RUN /opt/conda/bin/python3.11 -m venv  --system-site-packages ${VENV} \
  && echo "source $HOME/${VENV}/bin/activate" >> ${HOME}/.bashrc && source $HOME/${VENV}/bin/activate \
  && pip config set global.index-url https://mirrors.aliyun.com/pypi/simple && pip --no-cache-dir install --upgrade pip \
- && bash /app/docker/patch.sh && mkdir -p $HOME/.cache/torch $HOME/.vscode-server
+ && bash /app/docker/patch.sh && mkdir -p $HOME/.cache/torch $HOME/.vscode-server $HOME/.kaggle
 
 ENV LD_LIBRARY_PATH=/opt/conda/lib/python3.11/site-packages/torch/lib:/opt/conda/lib/python3.11/site-packages/nvidia/cudnn/lib:$LD_LIBRARY_PATH
 ENV PATH=/app:$PATH

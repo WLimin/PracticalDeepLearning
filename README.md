@@ -279,7 +279,8 @@
 ### Day 26 FastAI 06 multicat 07 sizing and tta
   - 多标签分类和回归
   - 第七章：训练一个最先进的模型 测试时间增强（TTA）
-### Day 27 FastAI 07 sizing and tta
-
-### Day 28 FastAI 08 collab
-
+### Day 27 FastAI 07 sizing and tta 08 collab
+  - 第八章：协同过滤深入探讨 08 Collaborative Filtering Deep Dive
+  - 第九章：表格建模深入探讨 09 Tabular Modeling Deep Dive 1/2
+### Day 28 FastAI 09 tabular
+  - 第九章：表格建模深入探讨 09 Tabular Modeling Deep Dive 2/2
