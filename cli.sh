@@ -27,6 +27,7 @@ CONTAINER_USER=webui
 LINK_MODELS=$" -v /usr/share/fonts/truetype:/usr/share/fonts/truetype \
   -v ${VOLUMES}/cache/torch:/home/$CONTAINER_USER/.cache/torch \
   -v ${VOLUMES}/cache/fastai:/home/$CONTAINER_USER/.fastai \
+  -v ${VOLUMES}/cache/kaggle:/home/$CONTAINER_USER/.kaggle \
   -v vscode_extension:/home/$CONTAINER_USER/.vscode-server "
 
 cli_common
