@@ -262,8 +262,24 @@
     - [X] 46 47
 ### Day 20 自然语言处理：预训练/应用
   - [ ] d2l-torch.pdf:703-741
-  - [ ] 【动手学深度学习v2】
-    - [X] 48-50, 68 BERT, 69,70 BERT微调
+  - [X] 【动手学深度学习v2】
+    - [X] 48-50, 68 BERT, 69,70 BERT微调,72 增加的优化算法
 ### Day 21 自然语言处理：应用/结束动手学深度学习v2/转入其它
-  - [ ] 【动手学深度学习v2】
+  - [X] d2l-torch.pdf:703-741
+### Day 22 英文版多了强化学习/推荐系统等应用/暂时改其它
+  - [X] 05_pet_breeds.md 第五章：图像分类 Image Classification
+  - AttributeError: 'Styler' object has no attribute 'hide_index'
+    对于pandas.__version__ == 2.1.4不适用，仍报错，查官网可知只有hide()属性了，即需将代码改成：
+    df.style.hide() 实现隐藏索引列的功能
+    隐藏其他列可传入参数subset，如df.style.hide(subset = [0,1,3], axis = 0)
+    同时更改的还有设置显示的小数精度，之前版本用的是“df.style.set_precision(2)”，设置带有小数点的列精度调整为小数点后2位，最新版本需将代码改成：
+    df.style.format(precision = 2) 实现上述功能
+### Day 23 - 25 Other Thing
+  - 看到有人开始用术语炫耀了，居然我都清楚概念上是什么，虽然代码不知道
+### Day 26 FastAI 06 multicat 07 sizing and tta
+  - 多标签分类和回归
+  - 第七章：训练一个最先进的模型 测试时间增强（TTA）
+### Day 27 FastAI 07 sizing and tta
+
+### Day 28 FastAI 08 collab
 
