@@ -282,5 +282,17 @@
 ### Day 27 FastAI 07 sizing and tta 08 collab
   - 第八章：协同过滤深入探讨 08 Collaborative Filtering Deep Dive
   - 第九章：表格建模深入探讨 09 Tabular Modeling Deep Dive 1/2
-### Day 28 FastAI 09 tabular
+### Day 28 FastAI 09 tabular/周二
   - 第九章：表格建模深入探讨 09 Tabular Modeling Deep Dive 2/2
+    - 随机森林
+    - 袋外误差
+    - 一些技巧和建议
+  - 本章的代码存在网络问题。Kaggle网站因显示验证代码失败而无法注册。
+### Day 29 FastAI 10 nlp/周三半日
+  - 第十章：NLP 深入探讨：RNNs
+  - 代码错误：
+  ```---------------------------------------------------------------------------
+OutOfMemoryError                          Traceback (most recent call last)
+Cell In[33], line 1
+----> 1 learn.fit_one_cycle(1, 2e-2)```
+
