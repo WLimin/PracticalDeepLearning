@@ -289,10 +289,33 @@
     - 一些技巧和建议
   - 本章的代码存在网络问题。Kaggle网站因显示验证代码失败而无法注册。
 ### Day 29 FastAI 10 nlp/周三半日
-  - 第十章：NLP 深入探讨：RNNs
+  - 第十章：NLP 深入探讨：RNNs 1/2
   - 代码错误：
   ```---------------------------------------------------------------------------
 OutOfMemoryError                          Traceback (most recent call last)
 Cell In[33], line 1
 ----> 1 learn.fit_one_cycle(1, 2e-2)```
+
+### Day 30 FastAI 10 nlp
+  - 第十章：NLP 深入探讨：RNNs 2/2
+### Day 31 FastAI 11 midlevel_data
+  - 第11章：使用 fastai 的中级 API 进行数据整理 Data Munging with fastai's Mid-Level API
+### Day 32 FastAI 12 nlp_dive
+  - 第12章：从头开始的语言模型 # A Language Model from Scratch
+### Day 33 FastAI 13 convolutions
+  - 第13章：卷积神经网络 # Convolutional Neural Networks
+### Day 34 FastAI 14 resnet
+  - 第14章：ResNets # ResNets
+### Day 35 FastAI 15 arch_details
+  - 第15章：应用架构深入探讨 # Application Architectures Deep Dive
+### Day 36 FastAI 16 accel_sgd
+  - 第16章：训练过程 # The Training Process
+### Day 37 FastAI 17 foundations
+  - 第17章：基础神经网络 # A Neural Net from the Foundations
+### Day 38 FastAI 18 CAM
+  - 第18章：使用 CAM 解释 CNN # CNN Interpretation with CAM
+### Day 39 FastAI 19 learner
+  - 第19章：从头开始创建一个 fastai 学习器 # A fastai Learner from Scratch
+### Day 40 FastAI 20 conclusion
+  - 第20章：总结思考 # Concluding Thoughts
 
