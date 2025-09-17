@@ -291,11 +291,12 @@
 ### Day 29 FastAI 10 nlp/周三半日
   - 第十章：NLP 深入探讨：RNNs 1/2
   - 代码错误：
-  ```---------------------------------------------------------------------------
+```#python
+---------------------------------------------------------------------------
 OutOfMemoryError                          Traceback (most recent call last)
 Cell In[33], line 1
-----> 1 learn.fit_one_cycle(1, 2e-2)```
-
+----> 1 learn.fit_one_cycle(1, 2e-2)
+```
 ### Day 30 FastAI 10 nlp
   - 第十章：NLP 深入探讨：RNNs 2/2
 ### Day 31 FastAI 11 midlevel_data
