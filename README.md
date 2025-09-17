@@ -292,31 +292,38 @@
   - 第十章：NLP 深入探讨：RNNs 1/2
   - 代码错误：
 ```#python
+/opt/conda/lib/python3.11/site-packages/fastai/callback/fp16.py:47: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  self.autocast,self.learn.scaler,self.scales = autocast(dtype=dtype),GradScaler(**self.kwargs),L()
+/opt/conda/lib/python3.11/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/fastai/callback/fp16.py:47: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.autocast,self.learn.scaler,self.scales = autocast(dtype=dtype),GradScaler(**self.kwargs),L()
+/opt/conda/lib/python3.11/site-packages/torch/amp/grad_scaler.py:136: UserWarning: torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.
+  warnings.warn(
 ---------------------------------------------------------------------------
 OutOfMemoryError                          Traceback (most recent call last)
 Cell In[33], line 1
 ----> 1 learn.fit_one_cycle(1, 2e-2)
 ```
-### Day 30 FastAI 10 nlp
-  - 第十章：NLP 深入探讨：RNNs 2/2
-### Day 31 FastAI 11 midlevel_data
+GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，GPU需要2小时左右训练，估计CPU要几天时间训练！
+### Day 30 FastAI 11 midlevel_data
   - 第11章：使用 fastai 的中级 API 进行数据整理 Data Munging with fastai's Mid-Level API
-### Day 32 FastAI 12 nlp_dive
+### Day 31 FastAI 12 nlp_dive
   - 第12章：从头开始的语言模型 # A Language Model from Scratch
-### Day 33 FastAI 13 convolutions
+### Day 31 FastAI 13 convolutions
   - 第13章：卷积神经网络 # Convolutional Neural Networks
-### Day 34 FastAI 14 resnet
+### Day 32 FastAI 14 resnet
   - 第14章：ResNets # ResNets
-### Day 35 FastAI 15 arch_details
+### Day 32 FastAI 15 arch_details
   - 第15章：应用架构深入探讨 # Application Architectures Deep Dive
-### Day 36 FastAI 16 accel_sgd
+### Day 32 FastAI 16 accel_sgd
   - 第16章：训练过程 # The Training Process
-### Day 37 FastAI 17 foundations
+### Day 32 FastAI 17 foundations
   - 第17章：基础神经网络 # A Neural Net from the Foundations
-### Day 38 FastAI 18 CAM
+### Day 33 FastAI 18 CAM
   - 第18章：使用 CAM 解释 CNN # CNN Interpretation with CAM
-### Day 39 FastAI 19 learner
+### Day 33 FastAI 19 learner
   - 第19章：从头开始创建一个 fastai 学习器 # A fastai Learner from Scratch
-### Day 40 FastAI 20 conclusion
+### Day 34 FastAI 20 conclusion
   - 第20章：总结思考 # Concluding Thoughts
 
