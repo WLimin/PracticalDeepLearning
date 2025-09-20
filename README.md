@@ -308,9 +308,9 @@ Cell In[33], line 1
 GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，GPU需要2小时左右训练，估计CPU要几天时间训练！
 ### Day 30 FastAI 11 midlevel_data/周四只有晚上
   - 第11章：使用 fastai 的中级 API 进行数据整理 Data Munging with fastai's Mid-Level API
-### Day 31 FastAI 12 nlp_dive/周五或只有晚上
+### Day 31 FastAI 12 nlp_dive/周五只有早上
   - 第12章：从头开始的语言模型 # A Language Model from Scratch
-### Day 31 FastAI 13 convolutions
+### Day 31 FastAI 13 convolutions/周六
   - 第13章：卷积神经网络 # Convolutional Neural Networks
 ### Day 32 FastAI 14 resnet
   - 第14章：ResNets # ResNets
