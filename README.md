@@ -314,10 +314,11 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
   - 第12章：从头开始的语言模型 # A Language Model from Scratch
     - 激活正则化和时间激活正则化
   - 第13章：卷积神经网络 # Convolutional Neural Networks
-### Day 32 FastAI 14 resnet
+### Day 32 FastAI 14 resnet/周日
   - 第13章：卷积神经网络 # Convolutional Neural Networks
   - 第14章：ResNets # ResNets
-### Day 32 FastAI 15 arch_details
+  - 第15章：应用架构深入探讨 # Application Architectures Deep Dive
+### Day 32 FastAI 15 arch_details/accel_sgd
   - 第15章：应用架构深入探讨 # Application Architectures Deep Dive
 ### Day 32 FastAI 16 accel_sgd
   - 第16章：训练过程 # The Training Process
