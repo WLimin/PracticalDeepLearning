@@ -319,15 +319,14 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
   - 第14章：ResNets # ResNets
   - 第15章：应用架构深入探讨 # Application Architectures Deep Dive
     - https://github.com/RethinkFun/DeepLearning https://www.zhihu.com/question/1913413189753877312?
-### Day 33 FastAI 16 accel_sgd/半日
+### Day 33 FastAI 16/17 accel_sgd/foundations/半日
   - 第16章：训练过程 # The Training Process
   - 深度学习基础：总结/概念与一般性概述/框架/回调等
-### Day 34 FastAI 17 foundations
   - 第17章：基础神经网络 # A Neural Net from the Foundations
-### Day 35 FastAI 18 CAM
+### Day 34 FastAI 18 CAM
   - 第18章：使用 CAM 解释 CNN # CNN Interpretation with CAM
-### Day 36 FastAI 19 learner
+### Day 35 FastAI 19 learner
   - 第19章：从头开始创建一个 fastai 学习器 # A fastai Learner from Scratch
-### Day 37 FastAI 20 conclusion
+### Day 36 FastAI 20 conclusion
   - 第20章：总结思考 # Concluding Thoughts
 
