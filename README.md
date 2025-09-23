@@ -306,24 +306,26 @@ Cell In[33], line 1
 ----> 1 learn.fit_one_cycle(1, 2e-2)
 ```
 GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，GPU需要2小时左右训练，估计CPU要几天时间训练！
-### Day 30 FastAI 11 midlevel_data
+### Day 30 FastAI 11 midlevel_data/周四只有晚上
   - 第11章：使用 fastai 的中级 API 进行数据整理 Data Munging with fastai's Mid-Level API
-### Day 31 FastAI 12 nlp_dive
+### Day 31 FastAI 12 nlp_dive/周五只有早上
   - 第12章：从头开始的语言模型 # A Language Model from Scratch
-### Day 31 FastAI 13 convolutions
+### Day 31 FastAI 13 convolutions/周六
+  - 第12章：从头开始的语言模型 # A Language Model from Scratch
+    - 激活正则化和时间激活正则化
   - 第13章：卷积神经网络 # Convolutional Neural Networks
-### Day 32 FastAI 14 resnet
+### Day 32 FastAI 14/15 resnet/周日
+  - 第13章：卷积神经网络 # Convolutional Neural Networks
   - 第14章：ResNets # ResNets
-### Day 32 FastAI 15 arch_details
   - 第15章：应用架构深入探讨 # Application Architectures Deep Dive
-### Day 32 FastAI 16 accel_sgd
+    - https://github.com/RethinkFun/DeepLearning https://www.zhihu.com/question/1913413189753877312?
+### Day 33 FastAI 16/17 accel_sgd/foundations/半日
   - 第16章：训练过程 # The Training Process
-### Day 32 FastAI 17 foundations
+  - 深度学习基础：总结/概念与一般性概述/框架/回调等
   - 第17章：基础神经网络 # A Neural Net from the Foundations
-### Day 33 FastAI 18 CAM
+### Day 34 FastAI 18/19/20 CAM/learner/conclusion
   - 第18章：使用 CAM 解释 CNN # CNN Interpretation with CAM
-### Day 33 FastAI 19 learner
   - 第19章：从头开始创建一个 fastai 学习器 # A fastai Learner from Scratch
-### Day 34 FastAI 20 conclusion
   - 第20章：总结思考 # Concluding Thoughts
-
+### Day 35 FastAI
+  - 复习
