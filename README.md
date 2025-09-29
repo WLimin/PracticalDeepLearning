@@ -492,4 +492,10 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
     - 第16/17/18章 时下最热门的大模型，包括GPT，Llama，DeepSeek。
   - 资源：https://www.rethink.fun/
   - github资源是配套的代码与数据。可惜不完整，lfs文件无法下载，包括国内gitee镜像。
+### Day 38 插入RethinkFun
+  - 复习RethinkFun数学部分1～5章：线代/微分/概率与统计
+  - 复习RethinkFun的基础pytorch部分6,7章：张量/张量计算/自动微分/nn.module/神经网络基本流程/逻辑回归
+  - 想起来“回归”——多次实验结果回归均值/期望
 ### Day 38 准备yolo
+  - 复习
+
