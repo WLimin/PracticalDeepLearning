@@ -14,7 +14,7 @@
    - Jupyter Notebook
      * 要学习的内容之一
      * 装到docker最好
-2. 免费资源  
+2. 免费资源
    **都说免费的是最贵的，我就要最贵的！**
    - 子模块中的两个
     * d2l
@@ -497,5 +497,17 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
   - 复习RethinkFun的基础pytorch部分6,7章：张量/张量计算/自动微分/nn.module/神经网络基本流程/逻辑回归
   - 想起来“回归”——多次实验结果回归均值/期望
 ### Day 38 准备yolo
-  - 复习
+  - YOLOv5主要网站：
+    - https://github.com/ultralytics/yolov5
+    - https://github.com/ultralytics/docs
+  - 复习RethinkFun 神经网络原理及优化部分8～11章：CNN/RNN/正则/优化/迁移学习
+  - 修改学习计划
+    - 先从官方GitHub仓库开始，官方文档 + GitHub代码
+    - 理论学习：
+       - 阅读官方论文
+       - 理解YOLO架构
+       - 学习损失函数
+### Day 39 意外的一天
+  - 复习RethinkFun 神经网络原理及优化部分8～11章：CNN/RNN/正则/优化/迁移学习
+  - 特别注意：pythorch的张量顺序：chw, channel_first, tonsorflow 采用hwc！一般学术论文里默认采用HWC格式？
 
