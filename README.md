@@ -566,11 +566,29 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
   - 复习RethinkFun 神经网络原理及优化部分16～18章：BERT/GPT1/2/3/4 已经成为小说了。LIama。DeepSeek。技术内容不多。
   - 全书完成。
 
-### Day 43 yolo
+### Day 44 休息
+  - 整理 AbdBarho/stable-diffusion-webui-forge docker
+  - 关于主要属于的英文词汇
+  - 量化与蒸馏问题
+
+### Day 45 pytorch
+  - 如果不坚持基础，容易走偏。
+  - 查找pytorch网站，熟悉相关API。
+  - Getting Started with PyTorch
+  - open_clip源代码浏览
+
+### Day 46 pytorch网站
+  - Deep Learning with PyTorch: A 60 Minute Blitz
+  - open_clip源代码浏览
+
+### Day 47 yolo
+  - YOLOv1-v5发展历史
   - YOLO基础概念
     目标检测数据标注格式
   - 准备目标检测数据集
   - YOLOv5结构解析
+    下午：YOLOv5源码解析
+
   - YOLO训练流程
   - 模型推理与可视化
   - 目标检测项目实践
@@ -626,8 +644,6 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
 #### 第11周：YOLO深入学习
 **目标：掌握YOLO系列算法**
   -  Day 73-74 (4小时)
-    上午：YOLOv1-v5发展历史
-    下午：YOLOv5源码解析
   -  Day 75-76 (4小时)
     上午：YOLO训练细节
     下午：YOLO推理优化
