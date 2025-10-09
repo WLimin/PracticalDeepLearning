@@ -584,6 +584,18 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
 ### Day 47 yolo
   - YOLOv1-v5发展历史
   - YOLO基础概念
+  - Learning PyTorch with Examples
+  - 用哪个：ultralytics/yolov5 和 ultralytics/ultralytics
+    - 都有 Docker，后缀丰富，参见各自源代码docker目录下文件名。一般有两个：latest,latest-cpu。当然，还有一些，latest-python
+    - ultralytics/yolov5：据说停更了，已经合并到ultralytics/ultralytics。但参考ultralytics/yolov5的docker image更新时间看，仍然在更新。
+    - ultralytics/ultralytics： 从docker文件看，默认是yolov11，代码和例子主推yolov8，有yolov5的支持，规模尚待确认（s,m,l,x）等。
+    - AI建议新手用ultralytics/ultralytics，也就是说，yolov8
+    - 关于推理与export：简单说 export是转化模型格式
+  - 决定引入ultralytics/ultralytics吧，然后了解两者的差别，即yolov8与yolov5
+  - ultralytics/ultralytics:  
+    - python:3.11.10-slim-bookworm + yolo11n + ultralytics + pytorch-cpu -> latest-python
+      + /bin/bash == latest-cpu
+      + jupyterlab == latest-jupyter
     目标检测数据标注格式
   - 准备目标检测数据集
   - YOLOv5结构解析
