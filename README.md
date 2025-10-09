@@ -592,10 +592,24 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
     - AI建议新手用ultralytics/ultralytics，也就是说，yolov8
     - 关于推理与export：简单说 export是转化模型格式
   - 决定引入ultralytics/ultralytics吧，然后了解两者的差别，即yolov8与yolov5
-  - ultralytics/ultralytics:  
+  - ultralytics/ultralytics:
     - python:3.11.10-slim-bookworm + yolo11n + ultralytics + pytorch-cpu -> latest-python
       + /bin/bash == latest-cpu
       + jupyterlab == latest-jupyter
+  - docker部署
+  - 下载https://ultralytics.com/assets/coco2017val.zip 失败：网络原因
+  - 混乱的官方docker容器：
+    - docker run -it --ipc=host -p 8888:8888  -v "$(pwd)"/datasets:/data/datasets ultralytics/ultralytics:latest-jupyter
+    - docker 容器内部
+    ```bash
+    /# ls data/
+datasets  {datasets,weights,runs}
+```
+  说明曾经有个命令希望建立data/{datasets,weights,runs}3个目录，失败。
+
+### Day 48 yolo
+
+  
     目标检测数据标注格式
   - 准备目标检测数据集
   - YOLOv5结构解析
