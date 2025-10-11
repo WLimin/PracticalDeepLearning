@@ -601,7 +601,7 @@ GPU直接爆显存，CPU运行15分钟以上没有任何进度。从原文看，
   - 混乱的官方docker容器：
     - docker run -it --ipc=host -p 8888:8888  -v "$(pwd)"/datasets:/data/datasets ultralytics/ultralytics:latest-jupyter
     - docker 容器内部
-    ```bash
+```bash
     /# ls data/
 datasets  {datasets,weights,runs}
 ```
@@ -615,12 +615,26 @@ datasets  {datasets,weights,runs}
   - 建议v11版本，通过hub管理模块
   - 封装完整，使用不阅读源代码估计真不行，原因是一但出错无法debug。
 
-### Day 49 yolo进展/忘记日期
-  - 阅读源代码与论文
-  - YOLOv5结构解析
-    下午：YOLOv5源码解析
-
+### Day 49 yolo进展/忘记日期/半天时间
   - YOLO训练流程
+  - YOLO主版本源代码差异
+
+### Day 50 TensorFlow基础/周日
+  - **目标：掌握TensorFlow基本使用**
+  - TensorFlow 2.x基础概念
+  - TensorFlow与PyTorch对比
+  - TensorFlow数据处理
+  - TensorFlow模型构建
+  - TensorFlow训练流程
+  - 模型部署基础
+
+### Day 51 TensorFlow基础/周一/半天
+  - YOLOv5结构解析
+  - YOLOv5源码解析
+
+### Day 52 TensorFlow基础/周二/半天
+  - 阅读源代码与论文
+
   - 模型推理与可视化
   - 目标检测项目实践
     下午：模型优化与调参
@@ -654,24 +668,11 @@ datasets  {datasets,weights,runs}
   -  Day 59-60 (4小时)
     上午：迁移学习详细原理
     下午：预训练模型使用
-  -  Day 61-62 (4小时)
-    上午：数据增强技术
     下午：超参数调优方法
   -  Day 63-65 (4小时)
     上午：模型集成方法
     下午：实际项目实践
 第3个月：TensorFlow/PyTorch高级应用 + YOLO实战
-#### 第10周：TensorFlow基础
-**目标：掌握TensorFlow基本使用**
-  -  Day 66-67 (4小时)
-    上午：TensorFlow 2.x基础概念
-    下午：TensorFlow与PyTorch对比
-  -  Day 68-69 (4小时)
-    上午：TensorFlow数据处理
-    下午：TensorFlow模型构建
-  -  Day 70-72 (4小时)
-    上午：TensorFlow训练流程
-    下午：模型部署基础
 #### 第11周：YOLO深入学习
 **目标：掌握YOLO系列算法**
   -  Day 73-74 (4小时)
