@@ -629,7 +629,10 @@ datasets  {datasets,weights,runs}
       - 支持 -user $(id -u):$(id -g)
       - 集中管理数据和模型
       - 本地源代码映射
+  - YOLOv5结构解析
+  - YOLOv5源码解析
 
+### Day 51 TensorFlow基础/周一/半天
   - **目标：掌握TensorFlow基本使用**
   - TensorFlow 2.x基础概念
   - TensorFlow与PyTorch对比
@@ -637,10 +640,6 @@ datasets  {datasets,weights,runs}
   - TensorFlow模型构建
   - TensorFlow训练流程
   - 模型部署基础
-
-### Day 51 TensorFlow基础/周一/半天
-  - YOLOv5结构解析
-  - YOLOv5源码解析
 
 ### Day 52 TensorFlow基础/周二/半天
   - 阅读源代码与论文
