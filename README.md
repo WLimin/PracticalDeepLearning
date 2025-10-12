@@ -620,6 +620,16 @@ datasets  {datasets,weights,runs}
   - YOLO主版本源代码差异
 
 ### Day 50 TensorFlow基础/周日
+  - 同样的构建工作
+    - cuda支持NVIDIA GeForce RTX 5070 Ti Laptop GPU的最低版本号：该GPU属于NVIDIA RTX 50系列，采用Blackwell架构，对应CUDA计算能力为12.0。（来源：https://developer.nvidia.com/cuda-gpus/）
+    - ultralytics/yolov5官方镜像：FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime，❌不支持该显卡，且不支持vscode(glibc版本低)，需要重新构建
+    - ultralytics/ultralytics官方镜像：FROM pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime，✅支持该显卡
+  - 重新构建 docker images
+    - 目标：
+      - 支持 -user $(id -u):$(id -g)
+      - 集中管理数据和模型
+      - 本地源代码映射
+
   - **目标：掌握TensorFlow基本使用**
   - TensorFlow 2.x基础概念
   - TensorFlow与PyTorch对比
