@@ -633,6 +633,13 @@ datasets  {datasets,weights,runs}
   - YOLOv5源码解析
 
 ### Day 51 TensorFlow基础/周一/半天
+  - 构建yolov11镜像
+  - 准备训练数据
+
+### Day 52 TensorFlow基础/周二/晚上1h
+  - 理解TensorFlow 2.x与PyTorch关系
+
+### Day 53 TensorFlow基础/周三
   - **目标：掌握TensorFlow基本使用**
   - TensorFlow 2.x基础概念
   - TensorFlow与PyTorch对比
