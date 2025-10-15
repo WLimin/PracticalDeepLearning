@@ -641,7 +641,11 @@ datasets  {datasets,weights,runs}
 
 ### Day 53 TensorFlow基础/周三
   - **目标：掌握TensorFlow基本使用**
-  - TensorFlow 2.x基础概念
+  - 查阅TensorFlow中文官方文档（https://tensorflow.google.cn/ ），正常访问。
+  - 教程：https://tensorflow.google.cn/tutorials 熟悉TensorFlow基础语法和简单模型构建。
+  - TensorFlow 2.x基础概念/张量/变量
+
+### Day 54 TensorFlow基础/周四/半天
   - TensorFlow与PyTorch对比
   - TensorFlow数据处理
   - TensorFlow模型构建
