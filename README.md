@@ -647,12 +647,13 @@ datasets  {datasets,weights,runs}
 
 ### Day 54 TensorFlow基础/周四/半天
   - TensorFlow与PyTorch对比
-  - TensorFlow数据处理
-  - TensorFlow模型构建
-  - TensorFlow训练流程
+  - 已经明白了，暂时放过TensorFlow，专注在yolov11
+
+### Day 54 yolov11深入视频学习
+  - B站上Opencv学习教程分享的视频
   - 模型部署基础
 
-### Day 52 TensorFlow基础/周二/半天
+### Day 55 周六/半天
   - 阅读源代码与论文
 
   - 模型推理与可视化
@@ -702,3 +703,7 @@ datasets  {datasets,weights,runs}
   -  Day 77-79 (4小时)
     上午：YOLO改进方法
     下午：自定义YOLO模型
+  - TensorFlow数据处理
+  - TensorFlow模型构建
+  - TensorFlow训练流程
+
