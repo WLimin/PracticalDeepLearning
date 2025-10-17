@@ -26,7 +26,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     sed -i -e 's#archive.ubuntu.com#mirrors.ustc.edu.cn#g' -e 's#security.ubuntu.com#mirrors.ustc.edu.cn#g' /etc/apt/sources.list \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt install -y tzdata \
-    && apt-get install --no-install-recommends -y tini v4l-utils build-essential \
+    && apt-get install --no-install-recommends -y tini v4l-utils build-essential libopencv-dev libopencv-dnn-dev \
     && apt-get clean &&  rm -rf /var/lib/apt/lists/* \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
     && python -m pip config set global.index-url https://mirrors.aliyun.com/pypi/simple \
@@ -45,7 +45,8 @@ COPY --from=base /root/.config/Ultralytics/ $HOME/.config/Ultralytics/
 
 # Cleanup
 RUN  pip install --no-cache-dir --upgrade pip -i https://mirrors.aliyun.com/pypi/simple \
- && pip install --no-cache-dir  ipykernel tensorboard opencv_python 'lap>=0.5.12' -i https://mirrors.aliyun.com/pypi/simple \
+ && pip install --no-cache-dir -i https://mirrors.aliyun.com/pypi/simple ipykernel tensorboard opencv_python 'lap>=0.5.12' \
+ 'onnx>=1.12.0' 'onnxslim>=0.1.71' onnxruntime onnxruntime-gpu paddlepaddle x2paddle \
  && rm -rf /root/.cache/pip && conda clean --all && chown -R ${USER}:${USER} $HOME/ /ultralytics
 
 ENV PATH=/ultralytics:$PATH

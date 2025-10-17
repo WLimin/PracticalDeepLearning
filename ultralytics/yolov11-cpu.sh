@@ -27,12 +27,11 @@ WHICH_IMAGE=$(basename "${BASH_SOURCE[0]}" ".sh")
 
 case "$WHICH_IMAGE" in
     "yolov11")
+        CONTAINER_NAME='yolov11'
         # 宿主机是否有 nvidia GPU
         if [ $NV_GPU -eq 1 ]; then #有gpu支持
-            CONTAINER_NAME=yolov11
             RUN_USE_GPU="${PORT} --name ${CONTAINER_NAME} --gpus all --shm-size=8g"
         else
-            CONTAINER_NAME='yolov11-cpu'
             RUN_USE_GPU="${PORT} --name ${CONTAINER_NAME} --shm-size=8g"
         fi
         ;;
