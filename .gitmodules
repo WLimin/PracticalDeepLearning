@@ -4,3 +4,10 @@
 [submodule "d2l-zh"]
 	path = d2l-zh
 	url = https://github.com/d2l-ai/d2l-zh
+[submodule "ultralytics/ultralytics"]
+	path = ultralytics/ultralytics
+	url = https://github.com/ultralytics/ultralytics
+
+[submodule "ultralytics/yolov5"]
+	path = ultralytics/yolov5
+	url = https://github.com/ultralytics/yolov5

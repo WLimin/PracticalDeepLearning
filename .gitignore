@@ -1,3 +1,10 @@
+ultralytics/datasets
+ultralytics/docs
+ultralytics/runs
+ultralytics/hub
+RethinkFun
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

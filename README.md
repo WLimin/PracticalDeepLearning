@@ -620,19 +620,40 @@ datasets  {datasets,weights,runs}
   - YOLO主版本源代码差异
 
 ### Day 50 TensorFlow基础/周日
-  - **目标：掌握TensorFlow基本使用**
-  - TensorFlow 2.x基础概念
-  - TensorFlow与PyTorch对比
-  - TensorFlow数据处理
-  - TensorFlow模型构建
-  - TensorFlow训练流程
-  - 模型部署基础
-
-### Day 51 TensorFlow基础/周一/半天
+  - 同样的构建工作
+    - cuda支持NVIDIA GeForce RTX 5070 Ti Laptop GPU的最低版本号：该GPU属于NVIDIA RTX 50系列，采用Blackwell架构，对应CUDA计算能力为12.0。（来源：https://developer.nvidia.com/cuda-gpus/）
+    - ultralytics/yolov5官方镜像：FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime，❌不支持该显卡，且不支持vscode(glibc版本低)，需要重新构建
+    - ultralytics/ultralytics官方镜像：FROM pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime，✅支持该显卡
+  - 重新构建 docker images
+    - 目标：
+      - 支持 -user $(id -u):$(id -g)
+      - 集中管理数据和模型
+      - 本地源代码映射
   - YOLOv5结构解析
   - YOLOv5源码解析
 
-### Day 52 TensorFlow基础/周二/半天
+### Day 51 TensorFlow基础/周一/半天
+  - 构建yolov11镜像
+  - 准备训练数据
+
+### Day 52 TensorFlow基础/周二/晚上1h
+  - 理解TensorFlow 2.x与PyTorch关系
+
+### Day 53 TensorFlow基础/周三
+  - **目标：掌握TensorFlow基本使用**
+  - 查阅TensorFlow中文官方文档（https://tensorflow.google.cn/ ），正常访问。
+  - 教程：https://tensorflow.google.cn/tutorials 熟悉TensorFlow基础语法和简单模型构建。
+  - TensorFlow 2.x基础概念/张量/变量
+
+### Day 54 TensorFlow基础/周四/半天
+  - TensorFlow与PyTorch对比
+  - 已经明白了，暂时放过TensorFlow，专注在yolov11
+
+### Day 54 yolov11深入视频学习
+  - B站上Opencv学习教程分享的视频
+  - 模型部署基础
+
+### Day 55 周六/半天
   - 阅读源代码与论文
 
   - 模型推理与可视化
@@ -682,3 +703,7 @@ datasets  {datasets,weights,runs}
   -  Day 77-79 (4小时)
     上午：YOLO改进方法
     下午：自定义YOLO模型
+  - TensorFlow数据处理
+  - TensorFlow模型构建
+  - TensorFlow训练流程
+
