@@ -20,7 +20,9 @@ fi
 # 需要在宿主机执行 xhost +localhost 打开x11支持。 
 EXTEND_ENV=" -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix "
 #启用X11转发（Linux系统）或者使用Docker Desktop的GUI支持 -e DISPLAY=host.docker.internal:0 
-
+if [[ -e /dev/video0 ]]; then
+    EXTEND_ENV="$EXTEND_ENV --device=/dev/video0:/dev/video0 "
+fi
 WHICH_IMAGE=$(basename "${BASH_SOURCE[0]}" ".sh")
 
 case "$WHICH_IMAGE" in
@@ -51,7 +53,6 @@ if [ $? -eq 0 ]; then
     docker start ${CONTAINER_NAME} && docker exec -it ${CONTAINER_NAME} /bin/bash
 else
     docker run -it ${RUN_USE_GPU} \
-     --user $(id -u):$(id -g) \
       -v vscode_extension:/home/$CONTAINER_USER/.vscode-server \
       -v "$(pwd)"/datasets:/ultralytics/datasets \
       -v "$(pwd)"/models:/ultralytics/models \
@@ -64,4 +65,5 @@ fi
 # ultralytics/hub/example_datasets
 # WORKDIR /usr/src/app
 #  -v "$(pwd)"/datasets:/usr/src/datasets 
+ #    --user $(id -u):$(id -g) 
 

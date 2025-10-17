@@ -650,6 +650,14 @@ datasets  {datasets,weights,runs}
   - 已经明白了，暂时放过TensorFlow，专注在yolov11
 
 ### Day 54 yolov11深入视频学习
+  - 解决docker访问摄像头的支持文件、权限等问题
+    - useradd -l -u $UID -U -G video -m -s /bin/bash ${USER} 将user加入video组
+    - [❌]容器创建时指定的--user $(id -u):$(id -g) 会覆盖容器内部用户组
+    - 需要在宿主机执行 xhost +localhost 打开x11支持，或许localhost也不正确。
+    - 指定参数 --device=/dev/video0:/dev/video0
+    - 用 opencv-python 取代 opencv-python-headless
+    - 安装提示缺失的包
+    - bytetrack.yaml之类的可以直接采用文件名，模型需要路径
   - B站上Opencv学习教程分享的视频
   - 模型部署基础
 
