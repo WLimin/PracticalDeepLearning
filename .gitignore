@@ -68,3 +68,26 @@ results
 /models
 /cache
 /doc
+# Neural Network weights -----------------------------------------------------------------------------------------------
+weights/
+*.weights
+*.pt
+*.ts
+*.pb
+*.onnx
+*.engine
+*.mlmodel
+*.mlpackage
+*.torchscript
+*.tflite
+*.h5
+*.mnn
+*_saved_model/
+*_web_model/
+*_openvino_model/
+*_paddle_model/
+*_ncnn_model/
+*_imx_model/
+pnnx*
+*.rknn
+
