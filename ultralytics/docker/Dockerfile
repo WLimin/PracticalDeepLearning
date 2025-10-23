@@ -24,8 +24,9 @@ ENV PYTHONUNBUFFERED=1 \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     TZ=Asia/Shanghai \
-    DEBIAN_FRONTEND=noninteractive \
-    CONDA_DEFAULT_ENV=${VENV} \
+    DEBIAN_FRONTEND=noninteractive
+
+ENV CONDA_DEFAULT_ENV=${VENV} \
     HOME=/home/${USER} \
     PATH=/ultralytics:/opt/conda/bin:/opt/conda/envs/${VENV}/bin:$PATH
 
