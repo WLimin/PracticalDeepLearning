@@ -675,3 +675,7 @@ datasets  {datasets,weights,runs}
   - 看视频： https://www.bilibili.com/video/BV1h8GGzeEUG
     - 进展： 27 FasterRCNN
 
+### Day 57 周六
+  - 看视频：28～36 算法简介与发展历史
+  - 数据集准备与处理：常用数据集，打标记
+
