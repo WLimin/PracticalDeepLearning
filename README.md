@@ -678,4 +678,10 @@ datasets  {datasets,weights,runs}
 ### Day 57 周六
   - 看视频：28～36 算法简介与发展历史
   - 数据集准备与处理：常用数据集，打标记
+  - 看代码：models/yolo/model.py, engine/model.py, engine/predictor.py
+  - 感觉没有全局观。命令行加载yolo11n.pt，查看网络层
+
+### Day 58 周日
+  - 看视频：数据集制作与处理3～9
+  - 数据集格式转换/slim库/TFRecord
 
