@@ -685,3 +685,7 @@ datasets  {datasets,weights,runs}
   - 看视频：数据集制作与处理3～9
   - 数据集格式转换/slim库/TFRecord
 
+### Day 59 周一
+  - 重新看视频：2025最新YOLO（YOLOv1~v13）算法解析教程 https://www.bilibili.com/video/BV1SchezBE5d/
+  - 看源代码和model.info，理解架构图 yolov8-backbone.jpeg
+
