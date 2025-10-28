@@ -690,3 +690,12 @@ datasets  {datasets,weights,runs}
   - 看源代码和model.info，理解架构图 yolov8-backbone.jpeg
   - 一些源代码的阅读
 
+### Day 60 周二
+  - 看视频：2025最新YOLO（YOLOv1~v13）算法解析教程 https://www.bilibili.com/video/BV1SchezBE5d/
+  - 所谓版本演变/一些参数与评价指标：IoU,TP,FP,FN,mAP
+  - 一些源代码的阅读
+
+### Day 61 周三
+  - 看视频：
+    - 第二章 YOLO算法基础与整体框架
+
