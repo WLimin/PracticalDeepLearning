@@ -699,3 +699,11 @@ datasets  {datasets,weights,runs}
   - 看视频：
     - 第二章 YOLO算法基础与整体框架
 
+### Day 62 周四/结束出差
+  - 看视频：
+    - 第二章 YOLO整体思路
+
+### Day 63 周五
+  - 看视频：
+    - 第三章 YOLO算法V2
+
