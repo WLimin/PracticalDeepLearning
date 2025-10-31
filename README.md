@@ -705,5 +705,9 @@ datasets  {datasets,weights,runs}
 
 ### Day 63 周五
   - 看视频：
-    - 第三章 YOLO算法V2
+    - 第三章 YOLO算法V2/架构/聚类先验框/偏移量/坐标映射与还原/感受野/特征融合
+
+### Day 64 周六
+  - 看视频：
+    - 第4章 YOLO算法V3/多scal方法与特征融合/ResNets等
 
