@@ -710,4 +710,9 @@ datasets  {datasets,weights,runs}
 
 ### Day 64 周六
   - 看视频：
+    - 第5章 YOLO算法V3/代码
+
+### Day 65 周日
+  - 看视频：
+    - 第6章 YOLO算法V3/训练
 
