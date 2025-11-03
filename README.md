@@ -712,7 +712,16 @@ datasets  {datasets,weights,runs}
   - 看视频：
     - 第5章 YOLO算法V3/代码
 
-### Day 65 周日
+### Day 65 周日/半日
+  - 看视频：
+    - 第5章 YOLO算法V3/代码/训练
+
+### Day 66 周一
   - 看视频：
     - 第6章 YOLO算法V3/训练
+    - 第7章 迁移学习与ResNets
+
+### Day 67 周2
+  - 看视频：
+    - 第8章 YOLO算法V3/FasterRCNN
 
