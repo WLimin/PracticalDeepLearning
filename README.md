@@ -725,7 +725,8 @@ datasets  {datasets,weights,runs}
   - 看视频：
     - 第8章 YOLO算法V3/FasterRCNN
 
-### Day 68 周3
+### Day 68 周3/半天
   - 看视频：
     - 第8x2章 YOLO算法V4
+    - 第9章 YOLO算法V7
 
