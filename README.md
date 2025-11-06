@@ -730,3 +730,15 @@ datasets  {datasets,weights,runs}
     - 第8x2章 YOLO算法V4
     - 第9章 YOLO算法V7
 
+### Day 69 周4/半天
+  - 看视频：
+    - YOLOV8
+
+### Day 70 周5/半天
+  - 看视频：
+    - YOLOV8/YOLO-WORLD
+
+### Day 71 周6
+  - 看视频：
+    - YOLO-WORLD/YOLOV9
+
